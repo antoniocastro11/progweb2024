@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "foto nome nome"
+        "left right right"
+        "footer footer footer";
+    gap: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+header {
+    grid-area: nome;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: #005b96;
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    grid-area: foto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    text-align: left;
+    margin-left: 20px;
+}
+
+section#left {
+    grid-area: left;
+    background-color: #b3cde0;
+    padding: 20px;
+}
+
+section#left h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+section#left p, section#left ul {
+    margin-bottom: 20px;
+}
+
+section#left ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section#right {
+    grid-area: right;
+    background-color: #b3cde0;
+    padding: 20px;
+    color: black;
+}
+
+section#right h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+section#right ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #005b96;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p, footer a {
+    margin-top: 10px;
+}
