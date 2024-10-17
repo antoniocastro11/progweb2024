@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Exercício 7 - Programação Web">
+    <meta name="keywords" content="HTML, Exercício, Programação Web">
+    <meta name="author" content="Antonio Castro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - Programação Web</title>
+    <link rel="stylesheet" href="antonio.castro.css"> <!-- O CSS externo é carregado aqui -->
+    <script src="antonio.castro.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Formulário</h1>
+    </header>
+
+    <main>
+        <section>
+            <form>
+                <label for="rga">RGA:</label>
+                <input type="text" id="rga" name="rga" pattern="\d{4}.\d{4}.\d{3}-\d" placeholder="0000.0000.000-0" onblur="validarRGA()">
+                <span id="rgaErro" class="erro">Preencha corretamente o RGA!</span>
+
+                
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" disabled> 
+
+                
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" onblur="validarSenha()"> 
+                <span id="senhaErro" class="erro">A senha deve ter: entre 6 e 15 caracteres, conter letras maiúsculas, minúsculas, números e caracteres especiais.</span>
+
+                
+
+                <label for="csenha">Confirme a senha:</label> 
+                <input type="password" id="csenha" name="csenha" onblur="confirmarSenha()"> 
+                <span id="csenhaErro" class="erro">As senhas não correspondem.</span>
+
+                
+
+                <label for="dataAtv">Data de início das atividades:</label>
+                <input type="date" id="dataAtv" name="dataAtv" onblur="validarData()"> 
+                <span id="dataErro" class="erro">A data de início deve ser posterior à data de hoje.</span>
+
+                <fieldset>
+                    <legend>Tipo de Permissão:</legend>
+                    <input type="radio" id="estudante" name="insens" value="estudante">
+                    <label for="estudante">Estudante</label>
+                    <input type="radio" id="monitor" name="insens" value="monitor">
+                    <label for="monitor">Monitor</label>
+                    <input type="radio" id="ouvinte" name="insens" value="ouvinte">
+                    <label for="ouvinte">Ouvinte</label>
+                </fieldset>
+
+                
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
